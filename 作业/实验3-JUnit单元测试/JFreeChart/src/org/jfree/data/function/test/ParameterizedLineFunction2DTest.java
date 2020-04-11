@@ -35,7 +35,8 @@ public class ParameterizedLineFunction2DTest {
     public static Collection<?> data() {
         return Arrays.asList(new Object[][] {
             {1, 1, 2, 3},
-            {1, 1, 2, 3}
+            {0, 0, 2354, 0},
+            {1, 1, 2, 3},
         });
     }
     

@@ -34,8 +34,12 @@ public class ParameterizedPowerFunction2DTest {
     @Parameters(name = "{index}")
     public static Collection<?> data() {
         return Arrays.asList(new Object[][] {
-            {1, 1, 2, 2},
-            {1, 1, 2, 2}
+            {5, 0, 2, 5},
+            {0, 3, 2, 0},
+            {3.68328, 2, 3, 33.14952},
+            {3, 0.2, 3, 3.7371928},
+            {3, -1, 3, 1},
+            {3, -0.232445, 3, 2.3238966},
         });
     }
     

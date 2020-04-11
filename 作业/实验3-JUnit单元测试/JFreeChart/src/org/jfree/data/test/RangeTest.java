@@ -88,7 +88,7 @@ public class RangeTest {
             {Type.toString, 23.1, 24, 0, 0},
             {Type.toString, -41.798461, 56.461283794, 0, 0},
             {Type.toString, 16.8, 16.8, 0, 0},
-            {Type.toString, -16.8, -16, 0, 0}
+            {Type.toString, -16.8, -16, 0, 0},
         });
     }
     

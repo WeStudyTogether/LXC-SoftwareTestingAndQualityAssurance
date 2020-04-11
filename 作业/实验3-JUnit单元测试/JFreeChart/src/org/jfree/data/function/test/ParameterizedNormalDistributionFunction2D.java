@@ -46,12 +46,18 @@ public class ParameterizedNormalDistributionFunction2D {
         return Arrays.asList(new Object[][] {
             //当类型为getMean时,参数3没有意义,参数4是预期值
             {Type.getMean, 1, 1, 0, 1},
+            {Type.getMean, 678.346353, 1, 0, 678.346353},
+            {Type.getMean, -766.6666654, 1, 0, -766.6666654},
             
             //当类型为getStandardDevitation时,参数3没有意义,参数4是预期值
             {Type.getStandardDevitation, 1, 1, 0, 1},
+            {Type.getStandardDevitation, 1, 5.6789433, 0, 5.6789433},
+            {Type.getStandardDevitation, 1, -3.89765444, 0, -3.89765444},
             
-          //当类型为getValue时,参数3是输入的x,参数4是预期值
-            {Type.getValue, 1, 1, 1, 2},
+            //当类型为getValue时,参数3是输入的x,参数4是预期值
+            {Type.getValue, 1, 1, 1, 0.398942280401433},
+            {Type.getValue, 1, 5.6789433, 0, 0.069168660975586},
+            {Type.getValue, -8.783266, 17.88863, 8.666, 0.013858667968907},
         });
     }
     
