@@ -26,7 +26,7 @@ import org.junit.runners.Parameterized.Parameters;
 */
 
 @RunWith(Parameterized.class)
-public class ParameterizedNormalDistributionFunction2D {
+public class ParameterizedNormalDistributionFunction2DTest {
 
     enum Type {
         getMean,
@@ -45,23 +45,23 @@ public class ParameterizedNormalDistributionFunction2D {
     public static Collection<?> data() {
         return Arrays.asList(new Object[][] {
             //当类型为getMean时,参数3没有意义,参数4是预期值
-            {Type.getMean, 1, 1, 0, 1},
-            {Type.getMean, 678.346353, 1, 0, 678.346353},
-            {Type.getMean, -766.6666654, 1, 0, -766.6666654},
+            {Type.getMean, 1, 1, 0, 1}, //测试m为整数, 返回1
+            {Type.getMean, 678.346353, 1, 0, 678.346353}, //测试m为正小数,返回678.346353
+            {Type.getMean, -766.6666654, 1, 0, -766.6666654}, //测试m为负小数,返回-766.6666654
             
             //当类型为getStandardDevitation时,参数3没有意义,参数4是预期值
-            {Type.getStandardDevitation, 1, 1, 0, 1},
-            {Type.getStandardDevitation, 1, 5.6789433, 0, 5.6789433},
-            {Type.getStandardDevitation, 1, -3.89765444, 0, -3.89765444},
-            
+            {Type.getStandardDevitation, 1, 1, 0, 1}, //测试s为整数,返回1
+            {Type.getStandardDevitation, 1, 5.6789433, 0, 5.6789433}, //测试s为正小数,返回5.6789433
+            {Type.getStandardDevitation, 1, -3.89765444, 0, -3.89765444}, //测试s为负小数,返回-3.89765444
+             
             //当类型为getValue时,参数3是输入的x,参数4是预期值
-            {Type.getValue, 1, 1, 1, 0.398942280401433},
-            {Type.getValue, 1, 5.6789433, 0, 0.069168660975586},
-            {Type.getValue, -8.783266, 17.88863, 8.666, 0.013858667968907},
+            {Type.getValue, 1, 1, 1, 0.398942280401433}, //测试整数,返回0.398942280401433
+            {Type.getValue, 1, 5.6789433, 0, 0.069168660975586}, //测试小数, 返回0.069168660975586
+            {Type.getValue, -8.783266, 17.88863, 8.666, 0.013858667968907}, //测试负数, 返回0.013858667968907
         });
     }
     
-    public ParameterizedNormalDistributionFunction2D(Type type, double m, double s, double x, double anticipated) {
+    public ParameterizedNormalDistributionFunction2DTest(Type type, double m, double s, double x, double anticipated) {
         this.type = type;
         this.m = m;
         this.s = s;

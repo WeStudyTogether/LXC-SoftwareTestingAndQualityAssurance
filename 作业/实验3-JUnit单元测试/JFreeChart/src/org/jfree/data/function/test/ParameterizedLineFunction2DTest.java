@@ -34,9 +34,9 @@ public class ParameterizedLineFunction2DTest {
     @Parameters(name = "{index}")
     public static Collection<?> data() {
         return Arrays.asList(new Object[][] {
-            {1, 1, 2, 3},
-            {0, 0, 2354, 0},
-            {1, 1, 2, 3},
+            {1, 1, 2, 3}, //测试为整数,返回3
+            {0, 0, 2354, 0}, //测试为0,返回0
+            {1.3453, -5.263718, 2, -9.182136}, //测试为小数,返回-9.182136
         });
     }
     
